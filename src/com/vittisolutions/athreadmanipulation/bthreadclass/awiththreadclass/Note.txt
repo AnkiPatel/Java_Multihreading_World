@@ -1,0 +1,7 @@
+Usually using the Runnable interface approach is preferred.
+
+if we extends Thread then we can’t extend any other class (usually a huge diasvantage) because in Java
+a given class can extends one class exclusively
+
+a class may implement more interfaces as well - so implementing the Runnable interface can
+do no harm in the software logic (now or in the future)

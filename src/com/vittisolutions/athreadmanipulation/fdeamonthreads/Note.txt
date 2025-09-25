@@ -1,0 +1,26 @@
+User thread
+----------------
+-> A user thread in java is a lightweight subprocess,the smallest unit of processing.
+-> It is used for any main or regular task
+ a) We can use "by extending Thread class"
+ b) We can use "by implementing Runnable class"
+-> User threads are typically created (directly or indirectly) from the main thread
+
+Worker Thread
+---------------
+-> The worker threads are user-defined  threads that perfom specific tasks, often in a thread pol - which
+allows multiple tasks to run in parallel
+    a) we can use "ExecutorService"
+-> worker threads are typically created (directly or indirectly) from the main thread
+-> web server handling client request, each request is processed by a worker thread from a thread pool
+
+Deamon Thread
+-------------------
+-> A Deamon thread is a background thread that runs in support of user threads. It does not prevent the JVM
+from exiting once all user threads finish
+-> Java's Timer uses a deamon thread by default
+-> background monitoring tasks to monitor application state, memory, logs, etc
+
+Note:
+1) JVM does not kill user/worker threads..!! be carefull
+   User and worker threads are "foreground thread" with high priority

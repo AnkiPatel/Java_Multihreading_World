@@ -1,0 +1,15 @@
+-> Thread scheduler decides what thread will be executed by the CPU
+-> Thread scheduler is the part of JVM
+
+-> we can assign a priority value (1-10) to every thread
+1: MIN_PRIORITY
+10: MAX_PRIORITY
+
+
+-> threads with the same priority value (default priority is 5) are
+executed in a FIFS first-in-first-served manner – the thread scheduler
+store the threads in a queue
+
+-> higher priority threads are executed before lower priority threads
+but it depends on the underlying OS (thread starvation is avoided)
+
