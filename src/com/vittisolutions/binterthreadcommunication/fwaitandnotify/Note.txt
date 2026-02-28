@@ -1,0 +1,8 @@
+What is the disadvantage of using wait() and notify()
+----------------------------------
+-> When  notify() happen, lock releases. now if we have multiple threads (more than 1) who are waiting,
+random thread will get lock. There is no fairness here. JVM cannot give guarantee that longest
+waiting thread will acquire the lock now. so there can be situation that thread go in starvation.
+
+So when multiple threads are in waiting state, JVM can randomely assign the lock to one of them. That creates
+undeterministic behaviour

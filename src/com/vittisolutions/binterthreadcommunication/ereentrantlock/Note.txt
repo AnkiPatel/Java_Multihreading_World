@@ -1,0 +1,30 @@
+-> A thread cannot acquire a lock that is owned by another thread. However, a thread can acquire a lock that it already
+owns. This is known as re-entrant synchronization.
+
+-> Re-entrant synchronization allows a thread to acquire the same lock multiple times without causing a deadlock.
+
+-> For example, consider a recursive method. If a thread calls a recursive, synchronized method multiple times,
+it's fine—the same thread re-enters the synchronized block each time.
+There’s no deadlock because re-entrant synchronization allows the thread to re-acquire the
+    object or class's intrinsic lock it already holds.
+
+MIMP: Here we are talking about how intrinsic lock is behaving as reentrant lock and we are not talking about Java's "ReentrantLock" lock.
+We will talk about ReentrantLock letter.
+
+-> Check the example in LearnReenterantBehaviourWithMonitor.java
+
+-> outerMethod and innerMethod are both synchronized.
+
+-> When a thread enters outerMethod, it acquires the object's intrinsic lock.
+
+-> It can then safely enter innerMethod—even though it's also synchronized—because it already holds the lock.
+This is re-entrant synchronization.
+
+
+The Recursive Method Analogy
+=========================================
+Think of a recursive function like Russian nesting dolls.
+Each doll opens to reveal another doll inside.
+If a synchronized recursive method calls itself, the same thread keeps re-entering the same locked block.
+Re-entrant locks handle this gracefully — the thread just keeps a counter of how many times it has entered,
+ and only fully releases the lock when that counter reaches zero.

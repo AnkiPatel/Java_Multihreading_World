@@ -1,0 +1,19 @@
+Using "Synchronized" keyword is not good idea always. Why?
+ANS:
+1) every object in Java has a so-called intrinsic lock (a.k.a monitor lock) associated with it
+2) it is a built-in mechanism the JVM provides for synchronization
+3) when you use the synchronized keyword on instance methods or blocks, the thread tries to acquire the intrinsic
+lock of the specific object (this) before entering the critical section
+4) only one thread can hold this lock at a time, other threads trying to acquire it must wait
+
+5) when you declare multiple synchronized instance methods in a class, all of them compete for the
+same single lock — the object's monitor
+6) if Thread#1 holds that lock executing method1(), Thread#2 trying to enter method2() on the same object must wait,
+even if method1() and method2() are logically independent
+
+
+
+
+
+
+
