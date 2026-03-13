@@ -1,0 +1,5 @@
+Dining Philosophers problem
+-------------------------
+-> Order of acquiring the chopstick is important
+-> Philosopher will take first left chopstick and then right chopstick..
+once the food time over, he/she put down right chopstic first and then left chopstick.
