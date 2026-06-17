@@ -33,7 +33,8 @@ class TaskProcessor {
             System.out.println("Consuming data : By consumer");
             System.out.println("consumer: Before notify()");
             notify();
-            //IMP: Lock will not release immediately by JAVA and further operation of this function will be continued.
+            //IMP: Lock will not release immediately by JAVA and further operation of
+            // this function will be continued.
 
             System.out.println("consumer: After notify()");
         }
@@ -45,8 +46,8 @@ Ans: No. That's why we should not use it when multiple thread are in picture.
 Explaination: As per notify() document: "Wakes up a single thread that is waiting on this object's monitor.
 If any threads are waiting on this object, one of them is chosen to be awakened.
 The choice is arbitrary and occurs at the discretion of the implementation."
-which means, if 5 other threads are in wait() state, randomly one out of it will be awakened on notify. Programmer dont
-have control over it and behaviour become un-deterministic.
+which means, if 5 other threads are in wait() state, randomly one out of it will be awakened on notify.
+Programmer dont have control over it and behaviour become un-deterministic.
             */
 
 public class LearnWaitNotify {
