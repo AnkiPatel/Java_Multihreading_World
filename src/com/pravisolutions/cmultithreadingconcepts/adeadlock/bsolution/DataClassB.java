@@ -58,6 +58,5 @@ public class DataClassB {
         System.out.println("OpB: releasing lockTwo");
         lockTwo.unlock();
 
-
     }
 }

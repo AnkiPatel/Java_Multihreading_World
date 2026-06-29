@@ -48,7 +48,7 @@ class consumerWork implements Runnable {
 }
 
 
-public class DriverApp {
+public class DriverAppA {
     public static void main(String[] args) throws InterruptedException {
 
         SharedBuffer buffer = new SharedBuffer(5);

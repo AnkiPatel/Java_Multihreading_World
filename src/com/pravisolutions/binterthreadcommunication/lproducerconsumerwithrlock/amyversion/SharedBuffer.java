@@ -27,7 +27,7 @@ public class SharedBuffer {
         bufferlock.lock();
         System.out.println("Acquired lock by producer");
         try {
-            while (buffer.size() == capacity) {
+            while (buffer.size() == capacity) { // Means thread continuously to wait till buffer is full.
                 System.out.println("producer now wait");
                 productionWait.await();
             }

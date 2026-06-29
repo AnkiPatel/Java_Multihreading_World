@@ -89,7 +89,8 @@ public class TestClassLevelLocking {
 
     public static void testObjectLevelLock() {
 
-        //There will be two different object, hence "Synchronized(this)" is actually happening in two different object
+        //There will be two different object, hence "Synchronized(this)" is actually happening in two
+        // different object
         var obj1 = new DataWithThreadWorkerObjectLevel();
         var obj2 = new DataWithThreadWorkerObjectLevel();
 

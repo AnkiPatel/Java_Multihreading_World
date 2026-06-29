@@ -1,6 +1,9 @@
 package com.pravisolutions.zforInterviews.useofsemaphor;
+/*
 
-public class ResturantTableAllocationApp {
+*/
 
-    
+public class DriverApp {
+
+
 }
